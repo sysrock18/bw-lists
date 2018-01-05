@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Crear Lista</h2>
+  <br />
+  <form action="/listForm/list/operate" method="POST">
+    <input type="hidden" name="_id" value="{{list._id}}"/>
+    <div class="form-group">
+      <label for="eventType">Tipo de Evento:</label>
+      <input type="eventType" class="form-control" id="eventType" name="eventType" value="{{list.eventType}}">
+    </div>
+    <div class="form-group">
+      <label for="destination">Destino:</label>
+      <input type="text" class="form-control" id="destination" name="destination" value="{{list.destination}}">
+    </div>
+    <div class="form-group">
+      <label for="date">Fecha:</label>
+      <input type="date" class="form-control" id="date" name="date" value="{{list.date}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Crear</button>
+    <a href="/" class="btn btn-danger">Cancelar</a>
+  </form>
+</div>

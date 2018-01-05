@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Listas</h2>
+  <div class="row">
+  <br>
+  <a href="/list/new" class="btn btn-primary">Crear Lista</a>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Tipo de Evento</th>
+        <th>Destino</th>
+        <th>Fecha</th>
+        <th colspan="3">Operacion</th>
+      </tr>
+      </thead>
+      {{#each lists}}
+        <tr>
+          <td>{{this.eventType}}</td> 
+          <td>{{this.destination}}</td>
+          <td>{{this.date}}</td>
+          <td><a href="/list/clients/{{this._id}}">Registrar Clientes</a></td>
+          <td><a href="/list/update/{{this._id}}">Actualizar</a></td> 
+          <td><a href="/list/delete/{{this._id}}">Eliminar</a></td>
+        </tr>          
+      {{/each}}
+    </table>
+  </div>
+</div>
